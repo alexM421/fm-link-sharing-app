@@ -1,0 +1,24 @@
+.authLayout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 48px;
+}
+
+.logo{
+    width: 182px;
+    height: 40px;
+}
+
+.authContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: var(--white);
+    gap: 40px;
+    width: 100%;
+    max-width: 480px;
+}

@@ -79,3 +79,19 @@
   line-height: 150%;
   letter-spacing: 0px;
 }
+
+/*Defaults*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--grey-50);
+}
+
+a{
+  text-decoration: none;
+}
