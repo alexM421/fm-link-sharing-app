@@ -1,0 +1,40 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 24px;
+}
+
+.inputsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--grey-50);
+    padding: 24px;
+    border-radius: 12px;
+    color: var(--grey-500);
+}
+
+
+.inputDiv{
+    display: flex;
+
+    align-items: center;
+    flex: 1;
+    gap: 16px;
+}
+
+.inputDiv > *{
+    flex: 1;
+}
+
+.inputDiv > p{
+    max-width: 200px;
+}
+
+.picture{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+

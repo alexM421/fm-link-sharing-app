@@ -6,13 +6,13 @@ import Button from "../Button/Button";
 import IconProfile from "../../assets/IconProfile"
 import IconLink from "../../assets/IconLink"
 
-export default function Navbar () {
+export default function Navbar ({variant="primary"}) {
 
     const path = useLocation().pathname
     const currentPageIsLinks = path==="/"? true:false
 
-    return(
-        <div className={styles.navbar}>
+    const primary = 
+        <>
             <img src={"/logo-devlinks-large.svg"} className={styles.logo}/>
             <div className={styles.pages}>
                 <Link
@@ -31,6 +31,17 @@ export default function Navbar () {
                 </Link>
             </div>
             <Button variant="secondary" text="Preview"/>
+        </>
+
+    const secondary = 
+        <>
+            <Burron variant="secondary" text="Back to Editor"/>
+            <Button variant="primary" text="Share Link"/>
+        </>
+
+    return(
+        <div className={styles.navbar}>
+            {variant==="primary"? primary:secondary}
         </div>
     )
 }

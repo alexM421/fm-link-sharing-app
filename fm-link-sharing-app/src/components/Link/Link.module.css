@@ -1,0 +1,31 @@
+.link{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 12px;
+    background-color: var(--grey-50);
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--grey-500);
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--grey-500);
+}
+
+.header > p{
+    transition: color ease 0.3s;
+    &:hover{
+        cursor: pointer;
+        color: var(--grey-900)
+    }
+}

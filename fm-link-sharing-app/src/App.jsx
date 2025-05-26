@@ -7,6 +7,8 @@ import AuthLayout from './layouts/AuthLayout/AuthLayout'
 import Login from './pages/Login/Login'
 import SignUp from './pages/SignUp/SignUp'
 import HomeLayout from './layouts/HomeLayout/HomeLayout'
+import Links from './pages/Links/Links'
+import Profile from './pages/Profile/Profile'
 
 function App() {
 
@@ -18,8 +20,8 @@ function App() {
         <Route path="sign-up" element={<SignUp/>}/>
       </Route>
       <Route path="/" element={<HomeLayout/>}>
-        <Route element={<h1>Links</h1>}/>
-        <Route path="profile" element={<h1>Profile</h1>}/>
+        <Route index element={<Links/>}/>
+        <Route path="profile" element={<Profile/>}/>
         <Route path='preview' element={<h1>Preview</h1>}/>
       </Route>
     </Routes>

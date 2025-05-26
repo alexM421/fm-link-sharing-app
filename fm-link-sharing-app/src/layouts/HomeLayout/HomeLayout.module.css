@@ -3,4 +3,13 @@
     flex-direction: column;
     gap: 24px;
     padding: 24px;
+    height: 100vh;
+
+}
+
+.content{
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    min-height: 0; /*Doesn't shrink because of children sizes, now does*/
 }

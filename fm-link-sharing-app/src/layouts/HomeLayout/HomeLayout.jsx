@@ -4,6 +4,7 @@ import { Outlet, Navigate } from "react-router-dom";
 import styles from "./HomeLayout.module.css"
 import { useAuthContext } from "../../contexts/AuthContext";
 import Navbar from "../../components/Navbar/Navbar";
+import Phone from "../../components/Phone/Phone";
 
 export default function HomeLayout () {
 
@@ -15,8 +16,11 @@ export default function HomeLayout () {
 
     return(
         <div className={styles.layout}>
-            <Navbar/>
-            <Outlet/>
+            <Navbar variant="primary"/>
+            <div className={styles.content}>
+                <Phone/>
+                <Outlet/>
+            </div>
         </div>
     )
 }

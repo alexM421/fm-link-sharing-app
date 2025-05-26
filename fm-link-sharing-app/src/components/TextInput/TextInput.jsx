@@ -5,15 +5,15 @@ import styles from "./TextInput.module.css"
 export default function TextInput ( { legend, icon, inputProps={}, message={}}) {
 
     const {underMessage, errorText, error } = message
-    const { type="text",placeholder, required, id, min} = inputProps  
+    const { type="text",placeholder, required, id, min, value, handleChange} = inputProps  
 
     return(
         <div className={`${styles.container} ${error? styles.error:""}`}>
             <p className={`text-preset-4 ${styles.legend}`}>{legend}</p>
             <label className={styles.inputField} htmlFor={id}>
-                <div className={`text-preset-3 ${styles.icon}`} src={icon}>
+                {icon? <div className={`text-preset-3 ${styles.icon}`} src={icon}>
                     {icon}
-                </div>
+                </div>:""}
                 <input
                 name={id}
                 id={id}
@@ -22,6 +22,8 @@ export default function TextInput ( { legend, icon, inputProps={}, message={}}) 
                 type={type}
                 required={required}
                 minLength={min}
+                value={value}
+                onChange={handleChange}
                 />
                 <p className={`text-preset-4`}>{errorText}</p>
             </label>

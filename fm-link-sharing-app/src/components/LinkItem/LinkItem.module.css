@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    padding: 16px;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+.text{
+    display: flex;
+    gap: 8px;
+}
+
+.container svg{
+    color: inherit;
+}
